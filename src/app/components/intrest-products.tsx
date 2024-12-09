@@ -5,7 +5,7 @@ import { CiHeart } from "react-icons/ci";
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
 import Image from "next/image";
 
-const products = new Array(6).fill({
+const products = new Array(3).fill({
   category: "Art de la Table",
   title: "Title",
   price: "0€",
@@ -16,7 +16,7 @@ const products = new Array(6).fill({
     "https://s3-alpha-sig.figma.com/img/544e/3029/c4c7cd0100e27f205801be034a1511b4?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UObQ1jdNLafDs35tHDWdbnI2uzfOLubZe~VeQQgEzp-RQ9Sqoq-abOSfTxoGqZ3ilk1R8wmsBLVSD5XErWDgw7ydHqMRBfQjRaaVylP68~6VToFE8bTWnA1~rKuus~oKIvAKV4rfOE8C2VgPnbVGIs4~HEywB-OVRuMP1xKQM84QmxP71f49-CxMzchX8m4xhIugKSLQIajXCgCTH1Gn3fvzzdMqzlExIVky0Z4cHz5qfzEZN5pbt2KWVNeW7c3NDPNh0J92t9KRIk1ZSdLduweifPASbqnUSW~vdt-HmnjDmiuVg75wtE5T9VSWJc0H82waaMtDwq1EOkHWoFyn~g__",
 });
 
-const RelatedProducts: React.FC = () => {
+export const Intrestroducts = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isLeftVisible, setIsLeftVisible] = useState(false);
   const [isRightVisible, setIsRightVisible] = useState(true);
@@ -77,7 +77,7 @@ const RelatedProducts: React.FC = () => {
           {products.map((product, index) => (
             <div
               key={index}
-              className="min-w-[300px] bg-white  rounded-lg group relative"
+              className="w-full bg-white  rounded-lg group relative"
             >
               <div className="flex justify-between items-center">
                 <button className="relative z-50 top-4 left-4 text-gray-500">
@@ -93,8 +93,14 @@ const RelatedProducts: React.FC = () => {
                 </div>
               </div>
 
-              <div className="relative p-10 hover:p-8">
-                <Image src={product.imageSrc} width={330} height={300} alt="" />
+              <div className="relative">
+                <Image
+                  src={product.imageSrc}
+                  width={0}
+                  height={300}
+                  alt=""
+                  className="p-10 w-full group-hover:p-8"
+                />
 
                 <div className="absolute mt-2 inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="flex gap-3 bg-gray-100 items-center justify-between w-full  p-1 rounded-lg">
@@ -136,5 +142,3 @@ const RelatedProducts: React.FC = () => {
     </div>
   );
 };
-
-export default RelatedProducts;
