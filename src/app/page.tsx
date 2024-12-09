@@ -1,3 +1,5 @@
+import Banner from "./components/banner";
+import Contact from "./components/contact";
 import Description from "./components/description";
 import { Intrestroducts } from "./components/intrest-products";
 import Itemsrow from "./components/items-row";
@@ -14,6 +16,8 @@ export default function Home() {
       <Description />
       <Relatedproducts />
       <Intrestroducts />
+      <Banner />
+      <Contact />
     </>
   );
 }

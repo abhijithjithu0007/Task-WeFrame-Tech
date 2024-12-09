@@ -53,7 +53,13 @@ export default function Productcard() {
             <div className="flex items-center border-b-2 gap-4 text-lg">
               <div className="flex gap-10  w-full pb-3 pt-3">
                 <div className="flex gap-2">
-                  <FaRuler className="text-gray-600 text-2xl" />
+                  <Image
+                    src="/assets/images/scale.png"
+                    width={20}
+                    height={8}
+                    className="text-gray-600"
+                    alt=""
+                  />
                   <div className="relative">
                     <p className="text-base font-semibold">
                       20
