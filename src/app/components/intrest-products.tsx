@@ -97,9 +97,10 @@ export const Intrestroducts = () => {
                 <Image
                   src={product.imageSrc}
                   width={0}
-                  height={300}
+                  height={0}
+                  layout="responsive"
                   alt=""
-                  className="p-10 w-full group-hover:p-8"
+                  className="p-16    w-full h-[200px] group-hover:p-14"
                 />
 
                 <div className="absolute mt-2 inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -114,7 +115,7 @@ export const Intrestroducts = () => {
                         +
                       </button>
                     </div>
-                    <button className="bg-pink-500 w-20 text-white py-2 px-4 rounded-lg shadow">
+                    <button className="bg-pink-500 text-sm w-20 text-white py-2 px-4 rounded-lg shadow">
                       Ajouter
                     </button>
                   </div>

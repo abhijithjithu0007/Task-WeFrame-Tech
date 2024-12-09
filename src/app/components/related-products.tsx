@@ -71,7 +71,7 @@ const RelatedProducts: React.FC = () => {
 
         <div
           ref={containerRef}
-          className="flex gap-5 overflow-x-auto pb-4"
+          className="flex gap-5 overflow-x-auto pb-4 scrollbar-hide"
           onScroll={handleScroll}
         >
           {products.map((product, index) => (
