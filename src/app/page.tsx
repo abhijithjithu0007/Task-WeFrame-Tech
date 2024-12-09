@@ -1,6 +1,8 @@
+import Description from "./components/description";
 import Itemsrow from "./components/items-row";
 import Navbar from "./components/nav-bar";
 import Productcard from "./components/product-card";
+import Relatedproducts from "./components/related-products";
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
       <Navbar />
       <Itemsrow />
       <Productcard />
+      <Description />
+      <Relatedproducts />
     </>
   );
 }

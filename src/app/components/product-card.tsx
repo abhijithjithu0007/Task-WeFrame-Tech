@@ -8,8 +8,8 @@ export default function Productcard() {
 
   return (
     <div className="p-8">
-      <h1 className="text-xl font-bold mb-4">
-        Home . <span className="text-gray-500">Art de la table</span>
+      <h1 className="text-md font-semibold mb-4">
+        Home <span className="text-gray-400">. Art de la table</span>
       </h1>
 
       <div className="flex flex-wrap gap-10">
@@ -37,7 +37,7 @@ export default function Productcard() {
         </div>
 
         <div className="flex-1 space-y-4">
-          <div className="flex-col justify-end">
+          <div className="flex-col justify-between h-[500px]">
             <div>
               <h1 className="text-3xl font-bold">
                 Cheese - appareil à raclette 1/2 roue
@@ -50,8 +50,8 @@ export default function Productcard() {
                 </span>
               </h1>
             </div>
-            <div className="flex items-center gap-4 text-lg">
-              <div className="flex gap-10 border-b-2 w-full pb-3">
+            <div className="flex items-center border-b-2 gap-4 text-lg">
+              <div className="flex gap-10  w-full pb-3 pt-3">
                 <div className="flex gap-2">
                   <FaRuler className="text-gray-600 text-2xl" />
                   <div className="relative">
@@ -97,8 +97,11 @@ export default function Productcard() {
                   </div>
                 </div>
               </div>
+              <div className="w-full flex  justify-end">
+                <h1 className="uppercase text-xs">réf : vabgn5</h1>
+              </div>
             </div>
-            <div className="text-gray-700 text-sm">
+            <div className="text-gray-700 text-sm mt-4">
               <p>
                 Location appareil à raclette - Raclette traditionnelle 1/2 roue
               </p>
@@ -111,15 +114,17 @@ export default function Productcard() {
               <p>900W</p>
             </div>
           </div>
-          <div className="flex justify-between gap-2">
-            <div className="flex items-center gap-10 outline outline-1 outline-gray-400 rounded-md p-1">
+          <div className="flex justify-between gap-2  border-t-2 border-gray-200">
+            <div className="flex mt-4 items-center gap-10 outline outline-1 outline-gray-400 rounded-md p-1">
               <button className="text-2xl p-1">-</button>
               <h1 className="text-xl font-bold flex-shrink-0">1</h1>
               <button className="text-2xl p-1">+</button>
             </div>
 
-            <div className="bg-[#5CD2DD] w-full text-center rounded-md flex items-center justify-center">
-              <button className="px-4 py-2">ajouter au panier</button>
+            <div className="bg-[#5CD2DD] mt-4 w-full text-center rounded-md flex items-center justify-center">
+              <button className="px-4 py-2 text-white uppercase ">
+                ajouter au panier
+              </button>
             </div>
           </div>
         </div>
