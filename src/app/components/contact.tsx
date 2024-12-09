@@ -12,16 +12,15 @@ export default function Contact() {
             width={0}
             height={0}
             layout="responsive"
-            className="w-full h-[150px] md:h-auto"
+            className="w-full md:h-auto"
           />
         </div>
       </div>
       <div className="bg-[#FFF3F9] p-7 rounded-lg md:rounded-3xl md:w-1/2">
-        <h2 className="text-[25px] md:text-[45px] text-gray-600">
-          S&apos;inscrire & économiser{" "}
-          <span className="text-[#5CD2DD]">10%</span>
+        <h2 className="text-[25px] md:text-4xl text-gray-600">
+          S'inscrire & économiser <span className="text-[#5CD2DD]">10%</span>
         </h2>
-        <p className="mt-2 text-sm md:text-[16px] text-[#BDA2B0] leading-6">
+        <p className="mt-2 text-sm md:text-[14px] text-[#BDA2B0]">
           Office ipsum you must be muted. Synergize helicopter prioritize anyway
           job due harvest most opportunity didnt. Yet busy any meeting shark
           light marginalised 4-blocker message. Productize corporate nail caught
@@ -32,12 +31,12 @@ export default function Contact() {
             <input
               type="text"
               placeholder="john@deo.com"
-              className="w-full px-2 py-3 md:py-4 border border-gray-300 rounded-md"
+              className="w-full px-2 py-3 md:py-3 border border-gray-300 rounded-md"
             />
           </div>
           <div className="w-full md:w-auto">
             <button className="w-full bg-[#5CD2DD] text-white py-3 md:py-4 px-6 flex items-center justify-center rounded-md">
-              s&apos;inscrire <IoArrowForwardSharp className="ml-2" />
+              s'inscrire <IoArrowForwardSharp className="ml-2" />
             </button>
           </div>
         </div>

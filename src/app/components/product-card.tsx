@@ -42,15 +42,16 @@ export default function Productcard() {
               <h1 className="text-3xl font-bold">
                 Cheese - appareil à raclette 1/2 roue
               </h1>
-              <h1 className="font-semibold mt-3 text-2xl text-gray-800 border-b-2 pb-3">
+              <h1 className="font-semibold mt-3 text-2xl text-gray-800  pb-3">
                 39,50€
                 <span className="text-sm font-semibold text-gray-500 mb-4">
                   {" "}
                   /pièce
                 </span>
               </h1>
+              <hr />
             </div>
-            <div className="flex items-center border-b-2 gap-4 text-lg">
+            <div className="flex items-center  gap-4 text-lg">
               <div className="flex gap-10  w-full pb-3 pt-3">
                 <div className="flex gap-2">
                   <Image
@@ -70,29 +71,12 @@ export default function Productcard() {
                   </div>
                 </div>
                 <div className="flex gap-2">
-                  <svg
-                    width="25"
-                    height="25"
-                    viewBox="0 0 100 100"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="50"
-                      cy="50"
-                      r="40"
-                      stroke="black"
-                      strokeWidth="2"
-                      fill="none"
-                    />
-                    <line
-                      x1="85"
-                      y1="15"
-                      x2="15"
-                      y2="85"
-                      stroke="black"
-                      strokeWidth="2"
-                    />
-                  </svg>
+                  <Image
+                    src="/assets/images/radius.png"
+                    width={23}
+                    height={18}
+                    alt=""
+                  />
                   <div className="relative">
                     <p className="text-base font-semibold">
                       50
@@ -107,6 +91,7 @@ export default function Productcard() {
                 <h1 className="uppercase text-xs">réf : vabgn5</h1>
               </div>
             </div>
+            <hr />
             <div className="text-gray-700 text-sm mt-4">
               <p>
                 Location appareil à raclette - Raclette traditionnelle 1/2 roue
@@ -120,7 +105,7 @@ export default function Productcard() {
               <p>900W</p>
             </div>
           </div>
-          <div className="flex justify-between gap-2  border-t-2 border-gray-200">
+          <div className="flex justify-between gap-2 ">
             <div className="flex mt-4 items-center gap-10 outline outline-1 outline-gray-400 rounded-md p-1">
               <button className="text-2xl p-1">-</button>
               <h1 className="text-xl font-bold flex-shrink-0">1</h1>

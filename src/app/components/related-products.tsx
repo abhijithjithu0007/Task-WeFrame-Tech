@@ -55,7 +55,7 @@ const RelatedProducts: React.FC = () => {
         {isLeftVisible && (
           <button
             onClick={scrollLeft}
-            className="z-50 absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#5CD2DD] p-2"
+            className="z-40 absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#5CD2DD] p-2"
           >
             <IoIosArrowRoundBack className="text-white text-2xl" />
           </button>
@@ -63,7 +63,7 @@ const RelatedProducts: React.FC = () => {
         {isRightVisible && (
           <button
             onClick={scrollRight}
-            className="absolute z-50 right-0 top-1/2 transform -translate-y-1/2 bg-[#5CD2DD] p-2"
+            className="absolute z-40 right-0 top-1/2 transform -translate-y-1/2 bg-[#5CD2DD] p-2"
           >
             <IoIosArrowRoundForward className="text-white text-2xl" />
           </button>
@@ -80,11 +80,11 @@ const RelatedProducts: React.FC = () => {
               className="min-w-[300px] bg-white  rounded-lg group relative"
             >
               <div className="flex justify-between items-center">
-                <button className="relative z-50 top-4 left-4 text-gray-500">
+                <button className="relative z-40 top-4 left-4 text-gray-500">
                   <CiHeart size={32} />
                 </button>
                 <div className="flex items-center">
-                  <span className="uppercase relative z-50 top-4 right-3 bg-gray-100 pr-2 pl-2 text-[10px] rounded">
+                  <span className="uppercase relative z-40 top-4 right-3 bg-gray-100 pr-2 pl-2 text-[10px] rounded">
                     {product.category}
                   </span>
                   <span className="hidden group-hover:block text-gray-500 ml-2 uppercase relative z-50 top-4 right-3 bg-[#FBF9F899] pr-2 pl-2 text-[10px] rounded">

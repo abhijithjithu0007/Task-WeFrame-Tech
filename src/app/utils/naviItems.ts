@@ -1,4 +1,4 @@
-const items = [
+export const items = [
   "art de la table",
   "mobilier",
   "nappage",

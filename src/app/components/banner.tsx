@@ -1,6 +1,6 @@
 export default function Banner() {
   return (
-    <div className="flex flex-col  justify-center text-center items-center p-10 md:p-16 bg-gradient-to-b from-pink-100 to-white">
+    <div className="flex flex-col  justify-center text-center items-center p-10 md:p-16 bg-gradient-to-b from-pink-50 to-white">
       <h1 className="text-[25px] md:text-[40px] mt-2 text-gray-600 ">
         On s’occupe de <span className="font-bold text-[#5CD2DD]">tout</span>
       </h1>
@@ -28,7 +28,6 @@ export default function Banner() {
           <p className="text-[#9C9C9C]">Selon vos besoins</p>
         </div>
         <hr className="hidden md:block md:w-[120px] md:mt-8 md:border-gray-300" />
-
         <div className="flex flex-col justify-center items-center gap-2">
           <img
             className="w-16 h-14"
