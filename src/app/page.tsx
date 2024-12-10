@@ -5,7 +5,7 @@ import { Intrestroducts } from "./components/intrest-products";
 import Itemsrow from "./components/nav-items-row";
 import Navbar from "./components/nav-bar";
 import Productcard from "./components/product-card";
-import Relatedproducts from "./components/related-products";
+import { RelatedProducts } from "./components/related-products";
 import Footer from "./components/footer";
 
 export default function Home() {
@@ -15,10 +15,9 @@ export default function Home() {
         <Navbar />
         <Itemsrow />
       </div>
-
       <Productcard />
       <Description />
-      <Relatedproducts />
+      <RelatedProducts />
       <Intrestroducts />
       <Banner />
       <Contact />

@@ -1,3 +1,5 @@
+//navar menu items
+
 export const items = [
   "art de la table",
   "mobilier",

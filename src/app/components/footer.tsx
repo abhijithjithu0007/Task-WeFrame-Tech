@@ -1,3 +1,5 @@
+//footer component
+
 import { ImTwitter } from "react-icons/im";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 
@@ -15,22 +17,21 @@ export default function Footer() {
             <h2 className="text-md font-bold text-[#393939]">
               INFOS PRATIQUES
             </h2>
-            <p className="text-gray-500">
-              A propos <br /> Livraisons & Reprises <br /> Mode d&apos;emploi{" "}
-              <br />
+            <p className="text-gray-500 font-medium">
+              À propos <br /> Livraisons & Reprises <br /> Mode'emploi <br />
               F.A.Q
             </p>
           </div>
           <div className="flex flex-col gap-2">
             <h2 className="text-md font-bold text-[#393939]">LÉGAL</h2>
-            <p className="text-gray-500">
+            <p className="text-gray-500 font-medium">
               Mentions légales <br /> CGU <br /> CGV <br />
               Politique de confidentialité
             </p>
           </div>
           <div className="flex flex-col gap-2">
             <h2 className="text-md font-bold text-[#393939]">MON COMPTE</h2>
-            <p className="text-gray-500">
+            <p className="text-gray-500 font-medium">
               Accéder à mon compte <br />
               Ma liste d&apos;envies <br /> Créer un compte <br />
               Mot de passe oublié
@@ -38,17 +39,16 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Social Media Section */}
         <div className="flex flex-col items-center gap-4 md:items-end">
           <h2 className="text-md font-bold text-[#393939]">NOUS SUIVRE</h2>
           <div className="flex gap-3">
-            <div className="p-2 border rounded-md hover:shadow-inner border-gray-300">
+            <div className="p-2 border rounded-md border-gray-300">
               <ImTwitter className="w-6 h-6" />
             </div>
-            <div className="p-2 border rounded-md hover:shadow-inner border-gray-300">
+            <div className="p-2 border rounded-md  border-gray-300">
               <FaInstagram className="w-6 h-6" />
             </div>
-            <div className="p-2 border rounded-md hover:shadow-inner border-gray-300">
+            <div className="p-2 border rounded-md  border-gray-300">
               <FaLinkedinIn className="w-6 h-6" />
             </div>
           </div>

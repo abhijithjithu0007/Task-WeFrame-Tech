@@ -1,58 +1,58 @@
+//related products component
+
 "use client";
 
 import React, { useRef, useState } from "react";
 import { CiHeart } from "react-icons/ci";
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
 import Image from "next/image";
+import { products } from "../utils/products";
 
-const products = new Array(6).fill({
-  category: "Art de la Table",
-  title: "Title",
-  price: "0€",
-  description: "0,35/Pièce",
-  ref: "RÉF: VABGN5",
-  quantity: "20 pièce",
-  imageSrc:
-    "https://s3-alpha-sig.figma.com/img/544e/3029/c4c7cd0100e27f205801be034a1511b4?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UObQ1jdNLafDs35tHDWdbnI2uzfOLubZe~VeQQgEzp-RQ9Sqoq-abOSfTxoGqZ3ilk1R8wmsBLVSD5XErWDgw7ydHqMRBfQjRaaVylP68~6VToFE8bTWnA1~rKuus~oKIvAKV4rfOE8C2VgPnbVGIs4~HEywB-OVRuMP1xKQM84QmxP71f49-CxMzchX8m4xhIugKSLQIajXCgCTH1Gn3fvzzdMqzlExIVky0Z4cHz5qfzEZN5pbt2KWVNeW7c3NDPNh0J92t9KRIk1ZSdLduweifPASbqnUSW~vdt-HmnjDmiuVg75wtE5T9VSWJc0H82waaMtDwq1EOkHWoFyn~g__",
-});
+export const RelatedProducts = () => {
+  // reference to the container div for scrolling control
+  const containerref = useRef<HTMLDivElement>(null);
+  const [isLeftShow, setIsLeftShow] = useState(false);
+  const [isRightShow, setIsRightShow] = useState(true);
 
-const RelatedProducts: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [isLeftVisible, setIsLeftVisible] = useState(false);
-  const [isRightVisible, setIsRightVisible] = useState(true);
-
+  // function to scroll to left
   const scrollLeft = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({ left: -330, behavior: "smooth" });
+    if (containerref.current) {
+      containerref.current.scrollBy({ left: -330, behavior: "smooth" });
     }
   };
 
+  // function to scroll to right
   const scrollRight = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({ left: 330, behavior: "smooth" });
+    if (containerref.current) {
+      containerref.current.scrollBy({ left: 330, behavior: "smooth" });
     }
   };
 
+  // handle the visibility of the scroll button
   const handleScroll = () => {
-    if (containerRef.current) {
-      const scrollLeftPosition = containerRef.current.scrollLeft;
-      const scrollWidth = containerRef.current.scrollWidth;
-      const clientWidth = containerRef.current.clientWidth;
+    if (containerref.current) {
+      const scrollLeftPosition = containerref.current.scrollLeft;
+      const scrollWidth = containerref.current.scrollWidth;
+      const clientWidth = containerref.current.clientWidth;
 
-      setIsLeftVisible(scrollLeftPosition > 0);
-      setIsRightVisible(scrollLeftPosition + clientWidth < scrollWidth);
+      setIsLeftShow(scrollLeftPosition > 0);
+      setIsRightShow(scrollLeftPosition + clientWidth < scrollWidth);
     }
   };
 
   return (
     <div className="p-7 bg-[#FBF9F899]">
       <div className="flex justify-between items-center mb-4 text-[#393939]">
-        <h1 className="text-3xl font-semibold">Articles similaires</h1>
+        <h1 className="text-lg md:text-2xl lg:text-3xl font-semibold">
+          Articles similaires
+        </h1>
         <h2 className="underline uppercase">Voir toute la collection</h2>
       </div>
 
       <div className="relative">
-        {isLeftVisible && (
+        {/* scroll buttons */}
+
+        {isLeftShow && (
           <button
             onClick={scrollLeft}
             className="z-40 absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#5CD2DD] p-2"
@@ -60,7 +60,7 @@ const RelatedProducts: React.FC = () => {
             <IoIosArrowRoundBack className="text-white text-2xl" />
           </button>
         )}
-        {isRightVisible && (
+        {isRightShow && (
           <button
             onClick={scrollRight}
             className="absolute z-40 right-0 top-1/2 transform -translate-y-1/2 bg-[#5CD2DD] p-2"
@@ -69,19 +69,25 @@ const RelatedProducts: React.FC = () => {
           </button>
         )}
 
+        {/* Product container */}
         <div
-          ref={containerRef}
+          ref={containerref}
           className="flex gap-5 overflow-x-auto pb-4 scrollbar-hide"
           onScroll={handleScroll}
         >
           {products.map((product, index) => (
             <div
               key={index}
-              className="min-w-[300px] bg-white  rounded-lg group relative"
+              className="min-w-[300px] bg-white rounded-lg group relative"
             >
               <div className="flex justify-between items-center">
-                <button className="relative z-40 top-4 left-4 text-gray-500">
-                  <CiHeart size={32} />
+                <button className="relative z-40 top-4 left-4 text-gray-500 text-2xl">
+                  <CiHeart />
+                  <span
+                    className="absolute inset-0 rounded-full bg-red-500 opacity-0 
+                    hover:opacity-50 hover:scale-150 
+                    transition-transform duration-700 ease-in-out"
+                  ></span>
                 </button>
                 <div className="flex items-center">
                   <span className="uppercase relative z-40 top-4 right-3 bg-gray-100 pr-2 pl-2 text-[10px] rounded">
@@ -95,10 +101,10 @@ const RelatedProducts: React.FC = () => {
 
               <div className="relative p-10 hover:p-8">
                 <Image src={product.imageSrc} width={330} height={300} alt="" />
-
                 <div className="absolute mt-2 inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="flex gap-3 bg-gray-100 items-center justify-between w-full  p-1 rounded-lg">
+                  <div className="flex gap-3 bg-gray-100 items-center justify-between w-full p-1 rounded-lg">
                     <span className="uppercase text-xs">Qté</span>
+                    {/* quantity control */}
                     <div className="flex justify-between items-center w-full h-full bg-white rounded-md">
                       <button className="text-gray-600 px-2 font-bold">
                         -
@@ -136,5 +142,3 @@ const RelatedProducts: React.FC = () => {
     </div>
   );
 };
-
-export default RelatedProducts;
